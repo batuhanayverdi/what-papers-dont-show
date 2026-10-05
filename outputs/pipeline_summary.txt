@@ -1,0 +1,41 @@
+WHAT PAPERS DON'T SHOW — PIPELINE SUMMARY
+============================================================
+
+Model: gpt-5.6-sol
+Prompt version: observability_v1
+Random seed: 42
+
+Comparable subfield tasks after merge: 4,938
+Pilot sample size: 50
+Successfully labeled: 50
+
+IMPORTANT DESIGN NOTE:
+OpenAI was NOT shown pct_researchers, prevalence, importance, frequency, classification, or researcher_paper_gap.
+
+Pilot category distribution:
+category
+Administration                      5
+Data Analysis                       8
+Data Gathering                      9
+Design & Development                5
+Ideation & Hypothesis Generation    6
+Mentorship & Teaching               1
+Peer Review & Service               1
+Reading & Knowledge Acquisition     5
+Theoretical Analysis                5
+Writing & Communication             5
+
+OpenAI observability summary:
+count    50.000000
+mean     79.440000
+std      23.298559
+min      15.000000
+25%      72.000000
+50%      88.000000
+75%      95.000000
+max      99.000000
+
+Output files:
+- C:\Users\Administrator\PycharmProjects\PythonProject\what-papers-dont-show-main\data\processed\pilot_sample.csv
+- C:\Users\Administrator\PycharmProjects\PythonProject\what-papers-dont-show-main\data\processed\openai_observability.csv
+- C:\Users\Administrator\PycharmProjects\PythonProject\what-papers-dont-show-main\data\processed\analysis_ready.csv
