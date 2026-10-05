@@ -1,0 +1,39 @@
+WHAT PAPERS DON'T SHOW - PILOT v2 SUMMARY
+================================================================
+Model: gpt-5.6-sol   Prompt version: observability_v2
+STATUS: prepared. OpenAI labelling has NOT been run; no observability results yet.
+
+1. SUBSTEPS JOIN VALIDATION
+  join_key: ['task', 'level', 'field', 'subfield']
+  substeps_domain_filled_for_subfield_rows: 0
+  comparable_tasks: 4938
+  tasks_with_matched_substeps: 4938
+  pct_tasks_with_matched_substeps: 100.0
+  tasks_with_zero_substeps: 0
+  v1_key_matches_for_comparison: 0
+  sample_tasks: 50
+  sample_tasks_with_substeps: 50
+  zero-substep tasks: []
+  substeps per sampled task: {'count': 50.0, 'mean': 10.86, 'std': 1.36, 'min': 8.0, '25%': 10.0, '50%': 11.0, '75%': 11.0, 'max': 15.0}
+
+2. LEAKAGE CHECKS (all passed)
+  Prompt fields allowlist: ['domain', 'field', 'subfield', 'task', 'substeps_text']
+  Prompts built and checked: 100 (50 main + 50 no_substeps)
+  Injected-leak self-test: passed
+  Template contains none of: pct_researchers, researcher_paper_gap, researcher_share, prevalence, importance, frequency, classification, category
+  Tasks whose own SciNet text contains a column-name word (allowed, logged):
+    235792bceb04b5d2: {'importance': 1}
+    6a5d28201c667f12: {'frequency': 1}
+    100e41c3cb09e6d4: {'frequency': 1}
+    dbb41fbd958b20b3: {'category': 2}
+    41c2dd6734f243a7: {'frequency': 1}
+    315562bdbbcb3b08: {'classification': 1, 'category': 1}
+    ee47c43608053e53: {'category': 1}
+    3f5be3e2ffea7fa9: {'frequency': 1}
+    7985a246d2ddec20: {'frequency': 3}
+    499370c73acced83: {'category': 1}
+    537b56d07eef4c1f: {'prevalence': 1}
+
+Prompts: data/processed/pilot_v2_prompts.jsonl
+Validation: outputs/pilot_v2_validation.json
+Sample: data/processed/pilot_v2_sample.csv
